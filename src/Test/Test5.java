@@ -15,15 +15,15 @@ public class Test5 {
 
     }
 
-    public static List<Integer> translateToTwo(double result, List<Integer> array) {
+    public static List<Integer> translateToTwo(double ab, List<Integer> array) {
         double x = 1;
-        while (result > 0) {
-            x = Math.floor(result/2);
+        while (ab > 0) {
+            x = Math.floor(ab/2);
 
-            if (x * 2 == result) {
+            if (x * 2 == ab) {
                 array.add (0);
                 return translateToTwo(x, array);
-            }if (x * 2 != result) {
+            }if (x * 2 != ab) {
                 array.add (1);
                 return translateToTwo(x, array);
             }
