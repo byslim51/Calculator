@@ -6,7 +6,7 @@ import java.util.List;
 public class Test5 {
     public static void main(String[] args) {
         int a = 2;
-        int b = 4;
+        int b = 6;
         int c = a + b;
         List<Integer> array = translateToTwo(c, new ArrayList<>());
         for (Object number : array) {
@@ -18,13 +18,14 @@ public class Test5 {
     public static List<Integer> translateToTwo(double ab, List<Integer> array) {
         double x = 1;
         while (ab > 0) {
-            x = Math.floor(ab/2);
+            x = Math.floor(ab / 2);
 
             if (x * 2 == ab) {
-                array.add (0);
+                array.add(0);
                 return translateToTwo(x, array);
-            }if (x * 2 != ab) {
-                array.add (1);
+            }
+            if (x * 2 != ab) {
+                array.add(1);
                 return translateToTwo(x, array);
             }
 
@@ -33,9 +34,9 @@ public class Test5 {
         int lastNum = array.get(array.size() - 1);
         int lastNum2 = array.get(array.size() - 2);
         int lastNum3 = array.get(array.size() - 3);
-        newArray.add (lastNum);
-        newArray.add (lastNum2);
-        newArray.add (lastNum3);
+        newArray.add(lastNum);
+        newArray.add(lastNum2);
+        newArray.add(lastNum3);
 
         return newArray;
     }
